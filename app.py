@@ -18,7 +18,7 @@ for i in range(len(Result)):
         # Locate all data and get them
         CourseTitleLine = str(xspan.text)
         CourseTitle=( CourseTitleLine.split(" ")[1].split("-")[0]  + "-" +CourseTitleLine.split(" ")[1].split("-")[1])
-        CourseName = str(Result[i+1].span.text)
+        CourseName = str(Result[i+1].span.text).title()
         CreditHours = str(Result[i + 3].span.text)
         
         # Save to Data Dictionary in format :{"Course Name": XXX, "Credit Hours:" :xxx}
@@ -42,7 +42,7 @@ for i in range(len(Result)):
 
         CourseTitleLine = str(xspan.text)
         CourseTitle=( CourseTitleLine.split(" ")[1].split("-")[0]  + "-" +CourseTitleLine.split(" ")[1].split("-")[1])
-        CourseName = str(Result[i+1].span.text)
+        CourseName = str(Result[i+1].span.text).title()
         CreditHours = str(Result[i + 3].span.text)
         
         # Save to Data Dictionary in format :{"Course Name": XXX, "Credit Hours:" :xxx}
